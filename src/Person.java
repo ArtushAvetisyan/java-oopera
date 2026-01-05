@@ -3,11 +3,11 @@ import java.util.Objects;
 public class Person {
     String name;
     String surname;
-    double height;
+    int height;
     Gender gender;
 
     // 1-й конструктор для актёра (с указанием роста)
-    public Person(String name, String surname, double height, Gender gender) {
+    public Person(String name, String surname, int height, Gender gender) {
         this.name = name;
         this.surname = surname;
         this.height = height;
@@ -18,7 +18,6 @@ public class Person {
     public Person(String name, String surname, Gender gender) {
         this.name = name;
         this.surname = surname;
-        this.height = height;
         this.gender = gender;
     }
 

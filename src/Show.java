@@ -3,10 +3,10 @@ import java.util.ArrayList;
 public class Show {
     ArrayList<Actor> listOfActors;
     String title;
-    double duration;
+    int duration;
     Director director;
 
-    public Show(ArrayList<Actor> actor, String title, double duration, Director director) {
+    public Show(ArrayList<Actor> actor, String title, int duration, Director director) {
         this.listOfActors = new ArrayList<>(actor);
         this.title = title;
         this.duration = duration;
@@ -38,11 +38,23 @@ public class Show {
     public void replaceActor(Actor actor, String replaceActorSurname) {
         Actor actorForCycle;
         boolean isValid = false;
+        int count = 0;
 
         if (actor == null) {
             System.out.println("Ошибка, отсутствует информация об актёре!");
             return;
         }
+
+        for (Actor a : listOfActors) {
+            if (a.surname.equals(replaceActorSurname)) {
+                count++;
+            }
+        }
+        if (count > 1) {
+            System.out.println("Ошибка! Актёр с такой фамилией уже в списке.");
+            return;
+        }
+
         for (int i = 0; i < listOfActors.size(); i++) {
             actorForCycle = listOfActors.get(i);
             if (actorForCycle.surname.equals(replaceActorSurname)) {

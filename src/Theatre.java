@@ -16,12 +16,12 @@ public class Theatre {
         String choreographer = "Юрий Григорович";
 
         // Создаём спектакли (с пустыми списками)
-        Show show = new Show(new ArrayList<>(), "Обычный", 2.5, nolan);
+        Show show = new Show(new ArrayList<>(), "Обычный", 60, nolan);
 
         Opera opera = new Opera(new ArrayList<>(), "Опера", 3, nolan,
                 musicAuthor, "текст либретто", 5);
 
-        Ballet ballet = new Ballet(new ArrayList<>(), "Балет", 1.15, tarantino, musicAuthor,
+        Ballet ballet = new Ballet(new ArrayList<>(), "Балет", 70, tarantino, musicAuthor,
                 "текст либретто", choreographer);
 
         // Распределяем актёров по спектаклям
