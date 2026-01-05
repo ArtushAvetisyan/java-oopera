@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class Show {
-    ArrayList<Actor> listOfActors;
-    String title;
-    int duration;
-    Director director;
+    final ArrayList<Actor> listOfActors;
+    final String title;
+    final int duration;
+    final Director director;
 
     public Show(ArrayList<Actor> actor, String title, int duration, Director director) {
         this.listOfActors = new ArrayList<>(actor);

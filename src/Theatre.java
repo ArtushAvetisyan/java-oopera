@@ -12,17 +12,17 @@ public class Theatre {
         Director nolan = new Director("Кристофер", "Нолан", 12, Gender.MALE);
         Director tarantino = new Director("Квентин", "Тарантино", 9, Gender.MALE);
 
-        String musicAuthor = "Ханс Циммер";
-        String choreographer = "Юрий Григорович";
+        Person musicAuthorHans = new Person("Ханс", "Циммер", Gender.MALE);
+        Person choreographerYuriy = new Person("Юрий", "Григорович", Gender.MALE);
 
         // Создаём спектакли (с пустыми списками)
         Show show = new Show(new ArrayList<>(), "Обычный", 60, nolan);
 
         Opera opera = new Opera(new ArrayList<>(), "Опера", 3, nolan,
-                musicAuthor, "текст либретто", 5);
+                musicAuthorHans, "текст либретто", 5);
 
-        Ballet ballet = new Ballet(new ArrayList<>(), "Балет", 70, tarantino, musicAuthor,
-                "текст либретто", choreographer);
+        Ballet ballet = new Ballet(new ArrayList<>(), "Балет", 70, tarantino, musicAuthorHans,
+                "текст либретто", choreographerYuriy);
 
         // Распределяем актёров по спектаклям
         show.addNewActor(leo);
