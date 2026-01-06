@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class Show {
-    final ArrayList<Actor> listOfActors;
-    final String title;
-    final int duration;
-    final Director director;
+    private ArrayList<Actor> listOfActors;
+    private String title;
+    private int duration;
+    private Director director;
 
     public Show(ArrayList<Actor> actor, String title, int duration, Director director) {
         this.listOfActors = new ArrayList<>(actor);
@@ -29,8 +29,8 @@ public class Show {
             System.out.println("Добавление актёра невозможна, так как отсутствует информация об актёре.");
         } else {
             listOfActors.add(actor);
-            System.out.println(actor.name + " " + actor.surname + " добавлен в список. " +
-                    "Его рост составляет - " + actor.height);
+            System.out.println(actor.getName() + " " + actor.getSurname() + " добавлен в список. " +
+                    "Его рост составляет - " + actor.getHeight());
         }
     }
 
@@ -46,7 +46,7 @@ public class Show {
         }
 
         for (Actor a : listOfActors) {
-            if (a.surname.equals(replaceActorSurname)) {
+            if (a.getSurname().equals(replaceActorSurname)) {
                 count++;
             }
         }
@@ -57,7 +57,7 @@ public class Show {
 
         for (int i = 0; i < listOfActors.size(); i++) {
             actorForCycle = listOfActors.get(i);
-            if (actorForCycle.surname.equals(replaceActorSurname)) {
+            if (actorForCycle.getSurname().equals(replaceActorSurname)) {
                 listOfActors.set(i, actor);
                 isValid = true;
                 break;
@@ -66,5 +66,13 @@ public class Show {
         if (!isValid) {
             System.out.println("В списке отсутствует актёр с фамилией " + replaceActorSurname);
         }
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public ArrayList<Actor> getListOfActors() {
+        return listOfActors;
     }
 }

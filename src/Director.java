@@ -1,5 +1,5 @@
 public class Director extends Person {
-    final int numberOfShows;
+    private int numberOfShows;
 
     public Director(String name, String surname, int numberOfShows, Gender gender) {
         super(name, surname, gender);
@@ -9,6 +9,6 @@ public class Director extends Person {
     // Вывод информации о режиссёре
     @Override
     public String toString() {
-        return "Режиссёр{имя='" + name + "', фамилия='" + surname + "'}";
+        return "Режиссёр{имя='" + getName() + "', фамилия='" + getSurname() + "'}";
     }
 }

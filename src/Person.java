@@ -1,9 +1,9 @@
 import java.util.Objects;
 
 public class Person {
-    protected String name;
-    protected String surname;
-    protected Gender gender;
+    private String name;
+    private String surname;
+    private Gender gender;
 
     public Person(String name, String surname, Gender gender) {
         this.name = name;
@@ -26,5 +26,17 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(name, surname);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public Gender getGender() {
+        return gender;
     }
 }

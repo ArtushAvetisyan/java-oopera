@@ -1,5 +1,5 @@
 public class Actor extends Person {
-    final int height;
+    private int height;
 
     public Actor(String name, String surname, int height, Gender gender) {
         super(name, surname, gender);
@@ -9,6 +9,10 @@ public class Actor extends Person {
     // Вывод информации об актёре (имя, фамилия и рост)
     @Override
     public String toString() {
-        return "Актёр{имя='" + name + "', фамилия='" + surname + "', рост='" + height + "'}";
+        return "Актёр{имя='" + getName() + "', фамилия='" + getSurname() + "', рост='" + height + "'}";
+    }
+
+    public int getHeight() {
+        return height;
     }
 }

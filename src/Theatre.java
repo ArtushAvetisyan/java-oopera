@@ -1,4 +1,3 @@
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 
 public class Theatre {
@@ -32,17 +31,17 @@ public class Theatre {
         ballet.addNewActor(angelina);
 
         // Вывод на экран список актёров спектаклей
-        System.out.println("Список актёров в спектакле с названием " + show.title + ":");
+        System.out.println("Список актёров в спектакле с названием " + show.getTitle() + ":");
         show.printAllActorsInfo();
-        System.out.println("Список актёров в спектакле с названием " + opera.title + ":");
+        System.out.println("Список актёров в спектакле с названием " + opera.getTitle() + ":");
         opera.printAllActorsInfo();
-        System.out.println("Список актёров в спектакле с названием " + ballet.title + ":");
+        System.out.println("Список актёров в спектакле с названием " + ballet.getTitle() + ":");
         ballet.printAllActorsInfo();
 
 
         // Замена актёра в спектакле (Я хотел написать get(0), но Idea предложил getFirst)
-        ballet.replaceActor(opera.listOfActors.getFirst(), "Джоли");
-        System.out.println("Список актёров в спектакле с названием " + ballet.title + ":");
+        ballet.replaceActor(opera.getListOfActors().getFirst(), "Джоли");
+        System.out.println("Список актёров в спектакле с названием " + ballet.getTitle() + ":");
 
         // Замена актёра на несуществующий (я так понимаю, нужно ввести фамилию актёра, который не существует)
         opera.replaceActor(leo, "Йоханссон");
