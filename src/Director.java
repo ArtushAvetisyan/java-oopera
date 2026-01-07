@@ -11,4 +11,12 @@ public class Director extends Person {
     public String toString() {
         return "Режиссёр{имя='" + getName() + "', фамилия='" + getSurname() + "'}";
     }
+
+    public int getNumberOfShows() {
+        return numberOfShows;
+    }
+
+    public void setNumberOfShows(int numberOfShows) {
+        this.numberOfShows = numberOfShows;
+    }
 }

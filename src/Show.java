@@ -68,11 +68,33 @@ public class Show {
         }
     }
 
+    public ArrayList<Actor> getListOfActors() {
+        return listOfActors;
+    }
+
+    /* Я создал геттеры и сеттеры для всех полей. Наверное так будет правильнее, так как возможно нужно будет изменить
+    какое-то поле уже созданного объекта */
     public String getTitle() {
         return title;
     }
 
-    public ArrayList<Actor> getListOfActors() {
-        return listOfActors;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public Director getDirector() {
+        return director;
+    }
+
+    public void setDirector(Director director) {
+        this.director = director;
     }
 }
